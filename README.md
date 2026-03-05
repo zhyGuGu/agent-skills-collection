@@ -1,21 +1,9 @@
 # agent-skills-collection
+English | [简体中文](README.zh-CN.md)
 
 A small collection of agent skills (skills.sh format) focused on niches that are usually underserved.
 
-## Skills
-
-- `skills/accessibility-audit` - Web accessibility auditing guidance (WCAG-oriented checks and remediation ideas).
-- `skills/data-science-patterns` - Repeatable data science / ML workflow patterns.
-- `skills/terraform-patterns` - Terraform/IaC architecture and workflow patterns.
-- `skills/flutter-best-practices` - Flutter engineering best practices and decision guides.
-- `skills/audio-production` - Audio production and editing workflows for creators.
-- `skills/design-tokens-migration` - A migration playbook for introducing design tokens into an existing UI codebase.
-- `skills/event-instrumentation-spec` - Privacy-aware analytics tracking plan templates and QA checklists.
-- `skills/data-retention-privacy-audit` - Practical data mapping and retention/deletion planning templates.
-- `skills/staged-rollout-playbook` - Progressive delivery checklists with health metrics and rollback triggers.
-- `skills/incident-postmortem-facilitator` - Blameless postmortem facilitation templates and action item rubric.
-
-## Install
+## Getting started
 
 Install the whole collection:
 
@@ -29,12 +17,49 @@ Or install a single skill by URL:
 npx skills add https://github.com/zhyGuGu/agent-skills-collection/tree/main/skills/accessibility-audit
 ```
 
-## Contributing / Local Development
+## Skills
 
-- Repo layout: skills live under `skills/<skill-name>/`.
-- Each skill typically provides `skills/<skill-name>/SKILL.md` (common convention on skills.sh).
+| Skill | What it helps with |
+| --- | --- |
+| [accessibility-audit](skills/accessibility-audit/) | Web accessibility audits (WCAG-oriented checks and remediation ideas). |
+| [data-science-patterns](skills/data-science-patterns/) | Repeatable data science / ML workflow patterns. |
+| [terraform-patterns](skills/terraform-patterns/) | Terraform/IaC architecture and workflow patterns. |
+| [flutter-best-practices](skills/flutter-best-practices/) | Flutter engineering best practices and decision guides. |
+| [audio-production](skills/audio-production/) | Audio production and editing workflows for creators. |
+| [design-tokens-migration](skills/design-tokens-migration/) | Introducing design tokens into an existing UI codebase. |
+| [event-instrumentation-spec](skills/event-instrumentation-spec/) | Privacy-aware analytics tracking plans and QA checklists. |
+| [data-retention-privacy-audit](skills/data-retention-privacy-audit/) | Data mapping plus retention/deletion planning templates. |
+| [staged-rollout-playbook](skills/staged-rollout-playbook/) | Progressive delivery checklists with metrics and rollback triggers. |
+| [incident-postmortem-facilitator](skills/incident-postmortem-facilitator/) | Blameless postmortem facilitation templates and action-item rubric. |
 
-## Publishing Notes
+## Repository structure
 
-- The `gh` CLI is not installed in this environment.
-- GitHub repo/org creation and pushing are manual (e.g., create repo on GitHub, add a git remote, then `git push`).
+```text
+agent-skills-collection/
+  skills/
+    <skill-name>/
+      SKILL.md
+  CONTRIBUTING.md
+  COMMUNITY.md
+  PUBLISHING.md
+  ENTERPRISE.md
+  LICENSE
+  README.md
+  README.zh-CN.md
+```
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [COMMUNITY.md](COMMUNITY.md).
+
+## Publishing
+
+See [PUBLISHING.md](PUBLISHING.md).
+
+## Enterprise
+
+See [ENTERPRISE.md](ENTERPRISE.md).
+
+## License
+
+See [LICENSE](LICENSE).
