@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate-skills:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install skills-ref
+        run: python -m pip install --upgrade pip skills-ref
+
+      - name: Validate skills
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          shopt -s nullglob
+          skill_md_files=(skills/*/SKILL.md)
+
+          if [ ${#skill_md_files[@]} -eq 0 ]; then
+            echo "No skills/*/SKILL.md found; skipping validation."
+            exit 0
+          fi
+
+          for skill_md in "${skill_md_files[@]}"; do
+            skill_dir="$(dirname "$skill_md")"
+            echo "Validating $skill_dir"
+            agentskills validate "$skill_dir"
+          done

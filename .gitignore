@@ -1,0 +1,21 @@
+# Local agent installs / sync outputs
+.agents/
+.claude/
+
+# skills CLI lockfile (project-local install state)
+skills-lock.json
+
+# Node
+node_modules/
+
+# OS / editor
+.DS_Store
+*.swp
+
+# Secrets
+.env
+*.pem
+
+# Internal execution state
+.sisyphus/notepads/
+.sisyphus/boulder.json

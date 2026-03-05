@@ -1,0 +1,55 @@
+name: Skill Feedback
+description: Share real usage feedback for a skill
+title: "feedback(<skill-name>): <short summary>"
+labels: ["feedback"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill name
+      description: Which skill did you use?
+      placeholder: accessibility-audit
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What were you trying to accomplish?
+      placeholder: I wanted to audit the checkout flow for keyboard/screen reader issues.
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_worked
+    attributes:
+      label: What worked
+      placeholder: The severity rubric and report template made it easy to write findings.
+    validations:
+      required: false
+
+  - type: textarea
+    id: what_didnt
+    attributes:
+      label: What didn't work / was confusing
+      placeholder: The checklist missed X; the output template was missing Y.
+    validations:
+      required: true
+
+  - type: textarea
+    id: missing
+    attributes:
+      label: Missing template/checklist
+      placeholder: I expected a template for ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Stack, platform, constraints
+      placeholder: React + Tailwind, Chrome, no design system.
+    validations:
+      required: false
