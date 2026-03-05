@@ -241,7 +241,7 @@ prepare_for_github/
 **Week 4**: Launch & validate
 - [x] Test with Claude Code
 - [x] Test with OpenCode
-- [ ] Publish to skills.sh
+- [x] Publish to skills.sh
 - [x] Gather initial feedback
 
 **Deliverables**:
@@ -453,7 +453,7 @@ prepare_for_github/
 
 ### Immediate (This Week)
 1. [ ] Review all planning documents
-2. [ ] Create GitHub organization
+2. [x] Create GitHub organization
 3. [ ] Set up first repository (accessibility-audit)
 4. [ ] Configure CI/CD pipeline
 
